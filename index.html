@@ -63,13 +63,13 @@
             //Receive number of users from server
             socket.on('broadcastNumOfUsers', function(number){
                 console.log("There are " + number + " participants");
-                $('#messages').append($('<tr>').text("There are " + number + " participants."));
+                $('#messages').append($('<tr align="center">').text("There are " + number + " participants."));
             });
 
             //Receive new user connected broadcast message
             socket.on('broadcastUserConnected', function(username){
                 console.log(username + " has connected.");
-                $('#messages').append($('<tr>').text(username + " has joined the conversation."));                
+                $('#messages').append($('<tr align="center">').text(username + " has joined the conversation."));                
             });
 
         });
@@ -95,7 +95,7 @@
         </div>
     </div>
 
-    <h1>Rednit Chat</h1>
+    <h1 align = "center">Rednit Chat</h1>
     <table id="messages" class = "table table-striped"></table>
     <form id="chat-form">
         <input type="text" class="form-control" id="msg" placeholder="Yo type your message here">
